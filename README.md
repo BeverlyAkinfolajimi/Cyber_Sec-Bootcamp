@@ -30,11 +30,12 @@ Load balancing ensures that the application will be highly available, in additio
 - What is the advantage of a jump box? The Jump box is identical to a gateway router. It is exposed to the public internet. it sits in front of other machines that are not exposed to the public internet. It helps provide a measure of security to other compute resources. It serves as a single entry point. It controls access to the other machines by allowing connections from specific IP addresses, and forwarding to those machines.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the files and system logs.
+
 - What does Filebeat watch for? 
-- It It monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing. 
+- "It monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing." 
 
 - What does Metricbeat record? 
-- Metricbeat helps to monitor your servers by collecting metrics from the system and services running on the server, such as: Apache.
+- "Metricbeat helps to monitor your servers by collecting metrics from the system and services running on the server, such as: Apache."
 
 The configuration details of each machine may be found below.
 
@@ -85,30 +86,38 @@ The playbook implements the following tasks:
 - Update vm.max_map_Count to 262144
 - Download and launch the ELK docker container
 - The following screenshot displays the result of running docker ps  afer successfully configuring the ELK instance. 
+
 'docker ps' Results
 
 ![image](https://user-images.githubusercontent.com/92961860/155660543-12bdb370-df83-463c-9bc6-c2ba45a9803e.png)
 
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
-
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- 10.0.0.4
+- 10.0.0.5
+- 10.0.0.6
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- Filebeat
+- Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+
+- Filebeat:  
+- "It monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing."
+
+
+- Metricbeat:
+- "It collects metric data from your target servers, this could be operating system metrics such as CPU or memory or data related to services running on the server. It can also be used to monitor other beats and ELK stack itself"
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the filebeat Configuration file to /etc/ansible/files/filebet-configuration.yml
+- Update the Filebea Configuration file to include the private IP address of the virtual machine that has been configured to run Elk.
+- Run the playbook, and navigate to http://[elk_server_ip_address to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
