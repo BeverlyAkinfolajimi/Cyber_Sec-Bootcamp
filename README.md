@@ -87,6 +87,8 @@ The playbook implements the following tasks:
 - The following screenshot displays the result of running docker ps  afer successfully configuring the ELK instance. 
 'docker ps' Results
 
+![image](https://user-images.githubusercontent.com/92961860/155660543-12bdb370-df83-463c-9bc6-c2ba45a9803e.png)
+
 
 ![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
 
