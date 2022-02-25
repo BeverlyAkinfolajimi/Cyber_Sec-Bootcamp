@@ -114,10 +114,7 @@ _TODO: Answer the following questions to fill in the blanks:_
 - How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - 		
 		
-[webservers]
--10.0.0.4 ansible_python_interpreter=/usr/bin/python3
--10.0.0.5 ansible_python_interpreter=/usr/bin/python3
--10.0.0.6 ansible_python_interpreter=/usr/bin/python3
+<img width="337" alt="image" src="https://user-images.githubusercontent.com/92961860/155653118-bc00a7c6-585a-4fb3-9c78-55f00a39c4b0.png">
 
 [elk]
 -10.1.0.4 ansible_python_interpreter=/usr/bin/python3
