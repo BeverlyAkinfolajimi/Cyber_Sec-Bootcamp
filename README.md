@@ -112,10 +112,14 @@ _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
 - _Which file do you update to make Ansible run the playbook on a specific machine? 
 - How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+ 
  [webservers]
-     <img width="609" alt="image" src="https://user-images.githubusercontent.com/92961860/155654630-9b3ae32b-f140-4645-9f1b-c99dea3c6770.png">
+     
+ <img width="609" alt="image" src="https://user-images.githubusercontent.com/92961860/155654630-9b3ae32b-f140-4645-9f1b-c99dea3c6770.png">
+ 
  [elk]
-     <img width="612" alt="image" src="https://user-images.githubusercontent.com/92961860/155654780-b313ab04-d6b8-49d9-a907-c0993791cbe2.png">
+     
+ <img width="612" alt="image" src="https://user-images.githubusercontent.com/92961860/155654780-b313ab04-d6b8-49d9-a907-c0993791cbe2.png">
 		
 
 
