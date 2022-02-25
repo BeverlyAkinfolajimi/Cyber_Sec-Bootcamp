@@ -115,9 +115,8 @@ _TODO: Answer the following questions to fill in the blanks:_
 - 		
 <img width="536" alt="image" src="https://user-images.githubusercontent.com/92961860/155653789-7537e883-e642-4e7a-a04c-02a4c55f92f3.png">
 		
+<img width="527" alt="image" src="https://user-images.githubusercontent.com/92961860/155654110-c12ebe24-6f69-4989-972a-148e21c97857.png">
 
-[elk]
--10.1.0.4 ansible_python_interpreter=/usr/bin/python3
 
 - _Which URL do you navigate to in order to check that the ELK server is running?
 
