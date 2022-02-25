@@ -1,4 +1,4 @@
--Scenario (Linux)
+Scenario (Linux)
 
 As a system administrator, your boss would like you to prepare a replacement server. You are tasked with completing the steps below to prepare this new server.
 
