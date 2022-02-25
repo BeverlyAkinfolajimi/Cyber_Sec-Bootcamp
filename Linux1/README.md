@@ -92,3 +92,18 @@ Run a Lynis system audit with sudo.
 
 
 Provide a report from the Lynis output on what more could be done to harden the system.
+  
+Bonus
+Despite claims from enthusiasts, Linux is not immune to malware. You will need to install and run the application chkrootkit, to search for any potential rootkits installed on the system.
+
+
+Install the chkrootkit package to your system if it is not already installed.
+
+
+Check the chkrootkit documentation for instructions on how to run a scan to find system root kits.
+
+
+Run chkrootkit (with sudo) in expert mode to verify the system does not have a root kit installed.
+
+
+Provide a report from chkrootkit output on what more could be done to harden the system.
