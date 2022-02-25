@@ -23,8 +23,9 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly available, in addition to restricting access  to the network.
-- What aspect of security do load balancers protect? Because of its's significant importance in the computing world, load balancers defend/protect several organizations against distributed denial-of-service (DDoS) attacks. This is caried out by by shifting attack traffic from the corporate server to a public cloud provider.
+Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
+- What aspect of security do load balancers protect? Load balancers protect by helping to distribute traffic evenly across the servers that mitigates DoS attacks. Also, because of its's significant importance in the computing world, load balancers defend/protect several organizations against distributed denial-of-service (DDoS) attacks. This is caried out by by shifting attack traffic from the corporate server to a public cloud provider.
+
 - What is the advantage of a jump box?_
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
@@ -47,10 +48,15 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 Only the JumpBox and Load balancer machines can accept connections from the Internet. Access to these servers are only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+- 23.96.23.32 can access the Jump Box
+- HTTP web traffic can access the Load Balancer
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by:
+- SSH connection from the Jump Box via Pot 22
+- HTTP traffic from the load balancer via Port 80
+
+- Which machine did you allow to access your ELK VM? The Local Machine
+- What was its IP address? 23.96.23.32
 
 A summary of the access policies in place can be found in the table below.
 
