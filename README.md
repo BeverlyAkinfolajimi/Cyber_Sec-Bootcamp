@@ -56,11 +56,11 @@ A summary of the access policies in place can be found in the table below.
 
 | Name          | Publicly Accessible | Allowed IP Addresses  |
 |---------------|---------------------|---------------------- |
-| Jump Box      | Yes  |              | 23.96.23.32           |
-| Web-1         | No   |              | 10.0.0.4 20.124.96.253|
-| Web-2         | No   |              | 10.0.0.4 20.124.96.253|
-| Load Balancer | Yes  |              | Any                   |
-| ELK Server    | Yes  |              | 20.122.166.144        |
+| Jump Box      | Yes                 | 23.96.23.32           |
+| Web-1         | No                  | 10.0.0.4 20.124.96.253|
+| Web-2         | No                  | 10.0.0.4 20.124.96.253|
+| Load Balancer | Yes                 | Any                   |
+| ELK Server    | Yes                 | 20.122.166.144        |
 
 ### Elk Configuration
 
