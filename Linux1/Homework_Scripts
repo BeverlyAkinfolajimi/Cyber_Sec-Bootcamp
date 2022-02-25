@@ -104,9 +104,10 @@ Command to see documentation and instructions: info chkrootkit
 
 Command to run expert mode:sudo chkrootkit  -x
 
-
-Provide a report from the chkrootkit output on what can be done to harden the system.
-
-
 Screenshot of end of sample output:
+
+
+
+
+
 
