@@ -119,9 +119,16 @@ SSH into the control node and follow the steps below:
 - Update the Filebea Configuration file to include the private IP address of the virtual machine that has been configured to run Elk.
 - Run the playbook, and navigate to http://[elk_server_ip_address to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
+FAQ & Answers:
+
+- Which file is the playbook? 
+-   Filebeat-playbook.yml
+
+- Where do you copy it?_
+    /etc/ansible/roles directory
+    
 - _Which file do you update to make Ansible run the playbook on a specific machine? 
+
 - How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
  
  [webservers]
@@ -135,5 +142,46 @@ _TODO: Answer the following questions to fill in the blanks:_
 
 
 - _Which URL do you navigate to in order to check that the ELK server is running?
+  
+      http://[ELK_SERVER_PUBLIC_IP_ADDRESS]:5601/app/kibana
+ 
+Commands needed to run to... (download the playbook, & file updates)
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+-Command: To copy File beat cnfiguration to the Ansible container:
+
+curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/filebeat-config.yml
+
+-Command: to edit Filebeat Configuration file:
+
+ vi /etc/ansible/files/filebeat-config.yml
+  
+  
+- Edit configuration file by scrolling to line #1106 and replace the IP address with the IP address of your ELK machine.
+
+output.elasticsearch:
+hosts: ["10.1.0.4:9200"]
+username: "elastic"
+password: "changeme"
+
+
+- Scroll to line #1806 and replace the IP address with the IP address of your ELK machine.
+setup.kibana:
+host: "10.1.0.4:5601"
+
+- Save and exit
+
+- Command to copy the Metricbeat Configuration file to the Ansible container:
+
+- curl https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557ce04c/raw/0ce2c7e744c54513616966affb5e9d96f5e12f73/metricbeat > /etc/ansible/files/metricbeat-configuration.yml
+
+- Command: To edit metricbeat configuration file:
+  vi /etc/ansible/files/metricbeat-config.yml
+  
+  The same changes made in the filebeat file shoulf be made in the metricbeat configuration file.
+  
+- Command to run the playbook:
+
+  ansible-playbook /etc/ansible/roles/filebeat-playbook.yml
+  
+  
+ 
